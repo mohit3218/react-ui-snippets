@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import './output.css';
+import OtpInput from './components/OtpInput';
+import CommentBox from './components/CommentBox';
+import TodoList from './components/TodoList';
+import Error from './components/Error';
 
 function App() {
+  const appRouter = createBrowserRouter([
+    {
+      path:"/",
+      element: <OtpInput />,
+      errorElement: <Error />
+    },
+    {
+      path:"/",
+      element: <CommentBox />,
+      errorElement: <Error />
+    },
+    {
+      path:"/",
+      element: <TodoList />,
+      errorElement: <Error />
+    },
+  ])
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='flex justify-center'>
+      <RouterProvider router={appRouter} />
     </div>
   );
 }
