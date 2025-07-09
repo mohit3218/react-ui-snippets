@@ -7,7 +7,7 @@ const SideBar = () => {
       <ul className="space-y-2 text-base text-gray-800">
         <li>
           <span className="mr-2">-</span>
-          <Link to="/opt-validator" className="hover:underline">
+          <Link to="/otp-validator" className="hover:underline">
             OTP Validator
           </Link>
         </li>

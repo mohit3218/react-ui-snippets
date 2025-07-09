@@ -17,7 +17,7 @@ function App() {
       errorElement: <Error />,
       children: [
         {
-          path: '/opt-validator',
+          path: '/otp-validator',
           element: (
             <Suspense fallback={<div>Loading...</div>}>
               <OtpComponent />
