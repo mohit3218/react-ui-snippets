@@ -7,6 +7,7 @@ import ProgressBar from './components/ProgressBar';
 const OtpComponent = lazy(() => import("./components/OtpInput"));
 const CommentBoxComponent = lazy(() => import("./components/CommentBox"));
 const TodoListComponent = lazy(() => import("./components/TodoList"));
+const FilesFolderComponent = lazy(() => import("./components/FilesFolderStructure"));
 
 function App() {
   const appRouter = createBrowserRouter([
@@ -28,6 +29,14 @@ function App() {
           element: (
             <Suspense fallback={<div>Loading...</div>}>
               <ProgressBar />
+            </Suspense>
+          )
+        },
+        {
+          path: '/files-folder-structure',
+          element: (
+            <Suspense fallback={<div>Loading...</div>}>
+              <FilesFolderComponent />
             </Suspense>
           )
         },

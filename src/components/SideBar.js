@@ -17,6 +17,12 @@ const SideBar = () => {
             Progress Bar
           </Link>
         </li>
+        <li>
+          <span className="mr-2">-</span>
+          <Link to="/files-folder-structure" className="hover:underline">
+              Vs-Code Folder Str
+          </Link>
+        </li>
         {/* <li>
           <span className="mr-2">-</span>
           <Link to="/comment-box" className="hover:underline">
