@@ -1,5 +1,4 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import './output.css';
 import Error from './components/Error';
 import { lazy, Suspense } from 'react';
 import MainLayout from './components/MainLayout'; // new layout
