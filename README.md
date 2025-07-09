@@ -55,3 +55,7 @@ A simple and animated progress bar component built using **React** and **Tailwin
   Semantic and accessible markup:
   - `role="progressbar"`
   - `aria-valuenow`, `aria-valuemin`, `aria-valuemax`
+  
+# Install Firebase
+    - npm install firebase
+    - Configure the firebase from documment 
