@@ -1,33 +1,63 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './output.css';
-import OtpInput from './components/OtpInput';
-import CommentBox from './components/CommentBox';
-import TodoList from './components/TodoList';
 import Error from './components/Error';
+import { lazy, Suspense } from 'react';
+import MainLayout from './components/MainLayout'; // new layout
+import ProgressBar from './components/ProgressBar';
+
+const OtpComponent = lazy(() => import("./components/OtpInput"));
+const CommentBoxComponent = lazy(() => import("./components/CommentBox"));
+const TodoListComponent = lazy(() => import("./components/TodoList"));
 
 function App() {
   const appRouter = createBrowserRouter([
     {
-      path:"/",
-      element: <OtpInput />,
-      errorElement: <Error />
-    },
-    {
-      path:"/",
-      element: <CommentBox />,
-      errorElement: <Error />
-    },
-    {
-      path:"/",
-      element: <TodoList />,
-      errorElement: <Error />
-    },
-  ])
-  
+      path: '/',
+      element: <MainLayout />, // wrap everything in layout
+      errorElement: <Error />,
+      children: [
+        {
+          path: '/opt-validator',
+          element: (
+            <Suspense fallback={<div>Loading...</div>}>
+              <OtpComponent />
+            </Suspense>
+          )
+        },
+        {
+          path: '/progress-bar',
+          element: (
+            <Suspense fallback={<div>Loading...</div>}>
+              <ProgressBar />
+            </Suspense>
+          )
+        },
+        {
+          path: '/comment-box',
+          element: (
+            <Suspense fallback={<div>Loading...</div>}>
+              <CommentBoxComponent />
+            </Suspense>
+          )
+        },
+        {
+          path: '/todo-list',
+          element: (
+            <Suspense fallback={<div>Loading...</div>}>
+              <TodoListComponent />
+            </Suspense>
+          )
+        },
+        {
+          index: true,
+          element: <div className='p-6'>Select a feature from the sidebar.</div>
+        }
+      ]
+    }
+  ]);
+
   return (
-    <div className='flex justify-center'>
-      <RouterProvider router={appRouter} />
-    </div>
+    <RouterProvider router={appRouter} />
   );
 }
 

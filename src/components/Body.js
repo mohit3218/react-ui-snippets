@@ -1,7 +1,11 @@
 import React from 'react'
 
+import SideBar from './SideBar'
+
 export const Body = () => {
   return (
-    <div>Body</div>
+    <div>
+        <SideBar />
+    </div>
   )
 }
