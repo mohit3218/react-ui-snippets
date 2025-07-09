@@ -4,7 +4,7 @@ import SideBar from './SideBar';
 
 const MainLayout = () => {
   return (
-    <div className="flex h-screen">
+    <div className="flex flex-col md:flex-row h-screen">
       <SideBar />
       <div className="flex-1 p-6 overflow-auto">
         <Outlet />

@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 const SideBar = () => {
   return (
-    <div className="h-screen border-l-4 border-orange-500 bg-gray-100 p-6 w-64 font-mono">
+    <div className="w-full md:w-64 border-l-4 border-orange-500 bg-gray-100 p-6 font-mono">
       <h3 className="text-lg font-bold mb-4">Features</h3>
       <ul className="space-y-2 text-base text-gray-800">
         <li>
