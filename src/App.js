@@ -8,6 +8,7 @@ const OtpComponent = lazy(() => import("./components/OtpInput"));
 const CommentBoxComponent = lazy(() => import("./components/CommentBox"));
 const TodoListComponent = lazy(() => import("./components/TodoList"));
 const FilesFolderComponent = lazy(() => import("./components/FilesFolderStructure"));
+const AutoCompleteSearchBar = lazy(() => import("./components/AutoCompleteSearchBar"));
 
 function App() {
   const appRouter = createBrowserRouter([
@@ -37,6 +38,14 @@ function App() {
           element: (
             <Suspense fallback={<div>Loading...</div>}>
               <FilesFolderComponent />
+            </Suspense>
+          )
+        },
+        {
+          path: '/auto-complete-search-bar',
+          element: (
+            <Suspense fallback={<div>Loading...</div>}>
+              <AutoCompleteSearchBar />
             </Suspense>
           )
         },

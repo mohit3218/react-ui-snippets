@@ -14,7 +14,7 @@ const ProgressBar = () => {
     }, 100); // Animation trigger delay
 
     return () => clearTimeout(timeout);
-  }, []);
+  }, []);// eslint-disable-next-line
 
   return (
     <div className="w-full min-h-screen p-6 bg-white">

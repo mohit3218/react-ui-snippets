@@ -68,3 +68,8 @@ A simple and animated progress bar component built using **React** and **Tailwin
  - List Folder Structure
  - Collapse and Expand folder
  - Add/Delete Folder inside data structure tree
+
+
+ # 📊 Autocomplete Search Bar
+## ✅ Features
+   - 

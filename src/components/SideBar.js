@@ -23,6 +23,12 @@ const SideBar = () => {
               Vs-Code Folder Str
           </Link>
         </li>
+        <li>
+          <span className="mr-2">-</span>
+          <Link to="/auto-complete-search-bar" className="hover:underline">
+              Auto Complete Search Bar
+          </Link>
+        </li>
         {/* <li>
           <span className="mr-2">-</span>
           <Link to="/comment-box" className="hover:underline">

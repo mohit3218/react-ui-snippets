@@ -8,7 +8,7 @@ const OtpInput = () => {
 
   useEffect(() => {
     refArr.current[0]?.focus();
-  }, []);
+  }, []);// eslint-disable-next-line
 
   const handleInputChangeEvent = (value, index) => {
     if (isNaN(value)) return;

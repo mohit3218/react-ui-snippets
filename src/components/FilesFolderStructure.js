@@ -1,7 +1,6 @@
-import React, { Children, useEffect, useState } from "react";
+import React, { useState } from "react";
 import jsonData from "../utils/vsFilesFolderStructure.json";
 import { RecursiveFolderFiles } from "./RecursiveFolderFiles";
-import { PlusIcon, MinusIcon, FolderIcon } from "@heroicons/react/24/solid";
 
 const FilesFolderStructure = () => {
   const [dataStructure, setDataStructure] = useState(jsonData);
