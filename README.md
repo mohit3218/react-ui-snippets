@@ -72,4 +72,7 @@ A simple and animated progress bar component built using **React** and **Tailwin
 
  # 📊 Autocomplete Search Bar
 ## ✅ Features
-   - 
+   - Fecth dummy json data
+   - Debouncing
+   - onBlur and onFocus list show and hide
+   - Cache data for stop multiple request API better perfomance
