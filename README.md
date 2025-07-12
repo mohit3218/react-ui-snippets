@@ -76,3 +76,27 @@ A simple and animated progress bar component built using **React** and **Tailwin
    - Debouncing
    - onBlur and onFocus list show and hide
    - Cache data for stop multiple request API better perfomance
+
+# React Recipe Pagination App
+
+This project displays a paginated list of recipe items fetched from an API using React and Tailwind CSS.
+
+## ✅ Features
+
+- Fetches 100+ recipes from [dummyjson.com](https://dummyjson.com/)
+- Displays 10 recipes per page
+- Responsive grid layout using Tailwind CSS
+- Pagination with Previous, Next, and numbered buttons
+- Clean separation of logic into components
+
+## 🔍 Folder Structure
+/src
+├── components
+│ ├── Pagination.js // Main component
+│ ├── PaginationRecipesData.js // Grid of recipes (one page at a time)
+│ └── PaginationControls.js // Pagination controls (buttons & arrows)
+│
+├── hooks
+│ └── useFetchData.js // Custom hook to fetch API data
+│
+├── constants.js // Constant value for pagination (e.g. items per page)

@@ -9,6 +9,7 @@ const CommentBoxComponent = lazy(() => import("./components/CommentBox"));
 const TodoListComponent = lazy(() => import("./components/TodoList"));
 const FilesFolderComponent = lazy(() => import("./components/FilesFolderStructure"));
 const AutoCompleteSearchBar = lazy(() => import("./components/AutoCompleteSearchBar"));
+const Pagination = lazy(() => import("./components/Pagination"));
 
 function App() {
   const appRouter = createBrowserRouter([
@@ -46,6 +47,14 @@ function App() {
           element: (
             <Suspense fallback={<div>Loading...</div>}>
               <AutoCompleteSearchBar />
+            </Suspense>
+          )
+        },
+        {
+          path: '/pagination',
+          element: (
+            <Suspense fallback={<div>Loading...</div>}>
+              <Pagination />
             </Suspense>
           )
         },

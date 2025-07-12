@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 const SideBar = () => {
   return (
-    <div className="w-full md:w-64 border-l-4 border-orange-500 bg-gray-100 p-6 font-mono">
+    <div className="w-full md:w-64 border-l-4 border-orange-500 bg-gray-100 p-3 font-mono">
       <h3 className="text-lg font-bold mb-4">Features</h3>
       <ul className="space-y-2 text-base text-gray-800">
         <li>
@@ -20,13 +20,19 @@ const SideBar = () => {
         <li>
           <span className="mr-2">-</span>
           <Link to="/files-folder-structure" className="hover:underline">
-              Vs-Code Folder Str
+              Vs-Code Folder structure
           </Link>
         </li>
         <li>
           <span className="mr-2">-</span>
           <Link to="/auto-complete-search-bar" className="hover:underline">
               Auto Complete Search Bar
+          </Link>
+        </li>
+        <li>
+          <span className="mr-2">-</span>
+          <Link to="/pagination" className="hover:underline">
+              Pagination
           </Link>
         </li>
         {/* <li>
